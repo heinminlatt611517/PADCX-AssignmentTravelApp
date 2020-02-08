@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    android:id="@+id/swipeRefreshLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragements.MainFragment">
+
+
+   <org.mmtextview.components.MMTextView
+       android:id="@+id/tv_find_best_tour"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="@string/str_txt_fnd_best_tour"
+       android:layout_marginLeft="@dimen/margin_large"
+       android:textSize="@dimen/text_heading_1x"
+       android:textStyle="bold"
+       android:layout_marginTop="@dimen/top_margin"
+       android:textColor="@color/colorBlack"/>
+
+    <org.mmtextview.components.MMTextView
+        android:id="@+id/tv_country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_txt_country"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_regular_3x"
+        android:layout_marginTop="@dimen/top_margin"
+        android:layout_marginLeft="@dimen/margin_large"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_country"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <org.mmtextview.components.MMTextView
+        android:id="@+id/tv_popular_tour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_txt_popu_tour"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_regular_3x"
+        android:layout_marginTop="@dimen/top_margin"
+        android:layout_marginLeft="@dimen/margin_large"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_popular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorGray">#666566</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorGreen">#4C854C</color>
+    <color name="colorBlackTransparent">#90000000</color>
+    <color name="cardviewBg">#f5f5f5</color>
+    <color name="detailCardViewBg">#e0f7fa</color>
+    <color name="ratingColorGray">#F3EFF3</color>
+</resources>

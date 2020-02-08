@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="130dp"
+    android:layout_height="200dp"
+    app:cardCornerRadius="20dp"
+    app:cardUseCompatPadding="true"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/iv_main_country"
+            android:alpha="0.7"
+            android:scaleType="fitXY"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/hotelfour" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_country_new"
+            android:layout_width="40dp"
+            android:layout_height="35dp"
+            android:text="@string/str_btn_new"
+            android:textColor="@android:color/white"
+            app:backgroundTint="@color/colorBlackTransparent"
+            app:cornerRadius="8dp"
+            android:textAllCaps="false"
+            android:textSize="8sp"
+            android:layout_margin="@dimen/margin_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            />
+
+        <org.mmtextview.components.MMTextView
+            android:id="@+id/tv_no_of_tour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/btn_country_new"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="18 Tours"
+            android:textSize="8sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="10dp"/>
+
+        <org.mmtextview.components.MMTextView
+            android:id="@+id/tv_country_title"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:maxLines="3"
+            android:singleLine="false"
+            android:text="Thailand"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tv_no_of_tour"
+            app:layout_constraintEnd_toStartOf="@+id/llayout"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/btn_country_new" />
+
+        <LinearLayout
+            android:id="@+id/llayout"
+            android:layout_width="20dp"
+            android:layout_height="40dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_no_of_tour"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_country_title"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/shape_transparent"
+            android:layout_marginLeft="@dimen/top_margin">
+
+            <org.mmtextview.components.MMTextView
+                android:id="@+id/tv_avg_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="8sp"
+                android:text="4.0"
+                android:textColor="@android:color/white"
+                />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_star_foreground"/>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

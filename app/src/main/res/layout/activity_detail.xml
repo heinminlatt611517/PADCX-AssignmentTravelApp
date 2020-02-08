@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/lContainer"
+    tools:context=".activities.DetailActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/app_bar">
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            app:contentScrim="@color/colorPrimary"
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/iv_detail"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/beach"
+                android:alpha="0.8"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+                <ImageView
+                    android:id="@+id/iv_detail_back"
+                    android:layout_margin="@dimen/margin_medium"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:src="@drawable/ic_arrowback_foreground"/>
+                <ImageView
+                    android:id="@+id/iv_favourite"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_fav_foreground"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/iv_detail_back"
+                    />
+                <ImageView
+                    android:id="@+id/iv_share"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_share_foreground"
+                    app:layout_constraintTop_toTopOf="@+id/iv_detail_back"
+                    app:layout_constraintEnd_toStartOf="@+id/iv_favourite"
+                    />
+
+                <RatingBar
+                    android:id="@+id/rating"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:layout_gravity="bottom|start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:rating="2"
+                    android:stepSize="1"
+                    android:layout_margin="20dp"
+                    android:theme="@style/RatingBar"
+                    app:layout_constraintStart_toStartOf="@+id/iv_detail_back"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_location"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_location_foreground"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginBottom="@dimen/margin_medium"
+                    app:layout_constraintStart_toStartOf="@id/iv_detail_back"
+                    app:layout_constraintBottom_toTopOf="@id/rating"
+                    />
+
+                <org.mmtextview.components.MMTextView
+                    android:id="@+id/tv_country_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@+id/iv_location"
+                    app:layout_constraintTop_toTopOf="@+id/iv_location"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_location"
+                    android:textStyle="bold"
+                    android:text="Thailand"
+                    android:singleLine="false"
+                    android:textColor="@android:color/white"
+                    />
+                <org.mmtextview.components.MMTextView
+                    android:id="@+id/tv_ratingNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="4.0"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@android:color/white"
+                    app:layout_constraintStart_toEndOf="@+id/rating"
+                    app:layout_constraintTop_toTopOf="@+id/rating"
+                    app:layout_constraintBottom_toBottomOf="@+id/rating"/>
+
+                <org.mmtextview.components.MMTextView
+                    android:id="@+id/tv_country_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sea Flower Resort"
+                    android:textStyle="bold"
+                    android:singleLine="false"
+                    style="@style/TextAppearance.MaterialComponents.Headline6"
+                    android:textColor="@android:color/white"
+                    android:layout_marginBottom="@dimen/margin_medium"
+                    app:layout_constraintBottom_toTopOf="@+id/iv_location"
+                    app:layout_constraintStart_toStartOf="@+id/rating"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:layout_margin="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <include
+                android:id="@+id/layoutOne"
+                layout="@layout/detail_up_layout"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <include
+                android:id="@+id/layoutTwo"
+                layout="@layout/detail_middle_layout"
+                app:layout_constraintTop_toBottomOf="@+id/layoutOne"/>
+
+            <TextView
+                android:layout_margin="@dimen/text_small"
+                android:layout_marginTop="10dp"
+                android:id="@+id/tv_detail_dec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorGray"
+                android:singleLine="false"
+                android:text="Located in Ko Chang, within 17.7 km of Koh Chang National Park and 19.3 km of Wat Klong Son, Sea Flower Resort provides accommodations with a garden and free WiFi as well as free private parking for guests who drive. The property is around 20.9 km from Ao Sapparot Pier, 4.7 km from Bang Bao Pier and 4.7 km from Bang Bao Fisherman Village. The property has valet parking, a tour desk and ticket service for guests.The resort has a terrace.Klong Plu Waterfall is 9.7 km from Sea Flower Resort, while International Clinic, Ko Chang is 12.9 km away.Lonely Beach is a great choice for travelers interested in friendly locals, sunsets and food."/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rec_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

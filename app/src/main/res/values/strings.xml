@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">PADCX-AssignmentTravelApp</string>
+    <string name="str_menu_home">Home</string>
+    <string name="str_txt_discount_tour">DiscountTour</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="str_txt_fnd_best_tour">Find the best tour</string>
+    <string name="str_txt_country">Country</string>
+    <string name="str_txt_popu_tour">Popular Tour</string>
+    <string name="str_btn_new">New</string>
+    <string name="str_txt_wifi_free">"Wifi  Free"</string>
+    <string name="str_txt_sand_beacj">Sand Beach</string>
+    <string name="str_txt_first_cost">First Costline</string>
+    <string name="str_txt_bar">Bar and Restaurant</string>
+</resources>

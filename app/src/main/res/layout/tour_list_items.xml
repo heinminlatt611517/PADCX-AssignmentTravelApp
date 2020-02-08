@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    app:cardCornerRadius="20dp"
+    android:elevation="0dp"
+    app:cardElevation="0dp"
+    app:cardBackgroundColor="@color/cardviewBg"
+    app:cardUseCompatPadding="true"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_popular_tour"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/hotelfour"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="h,1:1.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <org.mmtextview.components.MMTextView
+            android:id="@+id/txt_country_title"
+            android:textSize="@dimen/text_small"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/top_margin"
+            android:layout_marginLeft="@dimen/top_margin"
+            android:text="Thailand"
+            android:maxLines="2"
+            android:textStyle="bold"
+            android:singleLine="false"
+            app:layout_constraintEnd_toStartOf="@+id/llayout"
+            app:layout_constraintStart_toEndOf="@+id/iv_popular_tour"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <org.mmtextview.components.MMTextView
+            android:id="@+id/txt_body_title"
+            android:textSize="@dimen/text_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="10 night for two/all inclusive"
+            app:layout_constraintBottom_toTopOf="@+id/txt_dollar"
+            app:layout_constraintStart_toStartOf="@+id/txt_country_title"
+            app:layout_constraintTop_toBottomOf="@+id/txt_country_title" />
+
+        <org.mmtextview.components.MMTextView
+            android:id="@+id/txt_dollar"
+            android:textSize="@dimen/text_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/top_margin"
+            android:layout_marginBottom="@dimen/top_margin"
+            android:text="$245.50"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txt_country_title" />
+
+        <LinearLayout
+            android:id="@+id/lLayout"
+            android:layout_width="20dp"
+            android:layout_height="50dp"
+            app:layout_constraintTop_toTopOf="@+id/txt_country_title"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_dollar"
+            app:layout_constraintStart_toEndOf="@+id/txt_body_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/shape"
+            android:layout_marginLeft="@dimen/top_margin">
+
+            <org.mmtextview.components.MMTextView
+                android:id="@+id/rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="8sp"
+                android:text="4.0"
+                android:textColor="@android:color/white"
+                />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_star_foreground"/>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
